@@ -14,7 +14,7 @@ public class ProcessingController {
     private Timer timer = new Timer();
 
     /**
-     * Sample usage: curl "http://localhost:9090/blocking?delay=1500"
+     * curl "http://localhost:9090/blocking?delay=1500"
      */
     @RequestMapping("/blocking")
     public Result blockingProcessing(@RequestParam(value = "delay") int processingTimeMs) throws InterruptedException {
@@ -26,7 +26,7 @@ public class ProcessingController {
     }
 
     /**
-     * Sample usage: curl "http://localhost:9090/non-blocking?delay=1500"
+     * curl "http://localhost:9090/non-blocking?delay=1500"
      */
     @RequestMapping("/non-blocking")
     public DeferredResult<Result> nonBlockingProcessing(@RequestParam(value = "delay") int processingTimeMs) {
