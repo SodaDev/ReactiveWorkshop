@@ -1,10 +1,10 @@
 # ReactiveWorkshop
 
 #### In this repository there will be compared with each other:
-* Spring boot on Tomcat container
-* Spring boot on Undertow container
+* Spring boot on Tomcat container synchronous
+* Spring boot on Tomcat container asynchronous
+* Reactive Spring
 * Akka HTTP
-* Spring 5
 
 #### Every solution will be compared when it comes to:
 * Random delay in range value for predictably working services
