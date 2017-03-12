@@ -10,7 +10,7 @@ class BlockingRecordedSimulation extends Simulation {
   val maxWaitMs = 3000 milliseconds
   val rampUpTimeSecs = 60
   val testTimeSecs = 360
-  val noOfUsers = 5000
+  val noOfUsers = 11000
 
   val httpProtocol = http
     .baseURL("http://localhost:9090")
