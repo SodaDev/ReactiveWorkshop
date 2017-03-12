@@ -8,7 +8,7 @@ class BlockingShortRequestsSimulation extends Simulation {
   val minWaitMs = 100 milliseconds
   val maxWaitMs = 500 milliseconds
   val rampUpTimeSecs = 60
-  val noOfUsers = 25000
+  val noOfUsers = 125000
 
   val httpProtocol = http
     .baseURL("http://localhost:9090")

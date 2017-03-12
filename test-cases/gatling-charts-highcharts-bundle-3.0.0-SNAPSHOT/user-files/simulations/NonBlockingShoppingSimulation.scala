@@ -5,12 +5,12 @@ import io.gatling.http.Predef._
 import io.gatling.jdbc.Predef._
 import scala.util.Random
 
-class BlockingRecordedSimulation extends Simulation {
+class NonBlockingShoppingSimulation extends Simulation {
   val minWaitMs = 1000 milliseconds
   val maxWaitMs = 3000 milliseconds
   val rampUpTimeSecs = 60
   val testTimeSecs = 360
-  val noOfUsers = 11000
+  val noOfUsers = 10000
 
   val httpProtocol = http
     .baseURL("http://localhost:9090")
@@ -23,11 +23,11 @@ class BlockingRecordedSimulation extends Simulation {
 
   def nextDelay() = minWaitMs.toMillis + Random.nextDouble() * (maxWaitMs.toMillis - minWaitMs.toMillis);
 
-  val requestScenario = scenario("BlockingRecordedSimulation")
+  val requestScenario = scenario("NonBlockingRecordedSimulation")
     .during(testTimeSecs) {
       exec(
         http("process_request")
-          .get("/blocking")
+          .get("/non-blocking")
           .queryParam("delay", _ => nextDelay().toInt)
           .check(status.is(200)))
         .pause(minWaitMs, maxWaitMs)
