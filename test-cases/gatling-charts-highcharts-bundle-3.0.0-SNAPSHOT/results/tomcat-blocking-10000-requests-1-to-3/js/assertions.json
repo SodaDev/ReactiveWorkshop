@@ -1,0 +1,10 @@
+{
+  "simulation": "BlockingRecordedSimulation",
+  "simulationId": "blockingrecordedsimulation",
+  "start": 1489081071598,
+  "description": "",
+  "scenarios": ["BlockingRecordedSimulation"],
+  "assertions": [
+
+  ]
+}

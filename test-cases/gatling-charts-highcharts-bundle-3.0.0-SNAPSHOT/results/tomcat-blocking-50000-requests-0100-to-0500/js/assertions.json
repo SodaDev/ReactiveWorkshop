@@ -1,0 +1,10 @@
+{
+  "simulation": "BlockingShortRequestsSimulation",
+  "simulationId": "blockingshortrequestssimulation",
+  "start": 1489336766874,
+  "description": "",
+  "scenarios": ["BlockingShortRequestsSimulation"],
+  "assertions": [
+
+  ]
+}
